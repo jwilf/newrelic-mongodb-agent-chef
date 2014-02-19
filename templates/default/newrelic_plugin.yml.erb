@@ -1,0 +1,33 @@
+newrelic:
+  #
+  # Update with your New Relic account license key:
+  #
+  license_key: '<%= node['newrelic_mongodb_agent']['newrelic_license_key'] %>'
+  #
+  # Set to '1' for verbose output, remove for normal output.
+  # All output goes to stdout/stderr.
+  #
+  #verbose: 1
+#
+# Agent Configuration:
+#
+agents:
+  mongodb:
+    # for best outcome, us a full mongodb path for your "name"
+    agent_name: "<%= node['newrelic_mongodb_agent']['agent_name'] %>"
+    endpoint: "<%= node['newrelic_mongodb_agent']['endpoint'] %>"
+    database: "<%= node['newrelic_mongodb_agent']['database'] %>"
+
+    #
+    #  If you are running MongoDB without authentication, please delete from now to the end
+    #  of the file.
+    #
+    #  If you *are* running authentication on MongoDB please enter the following.  In order
+    #  to monitor MongoDB, on an authenticated environment, an admin user is required.  To
+    #  add an admin user, just add the user to the admin database like so from the MongoDB CLI:
+    #
+    #  > use admin
+    #  > db.addUser("myadminuser", "myadminpassword")
+    #
+    username: "root"
+    password: ""

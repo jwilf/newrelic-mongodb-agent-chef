@@ -3,3 +3,4 @@ default['newrelic_mongodb_agent']['download_root'] = 'https://github.com/MongoHQ
 default['newrelic_mongodb_agent']['rvm_ruby'] = '2.1'
 default['newrelic_mongodb_agent']['user'] = 'mongod'
 default['newrelic_mongodb_agent']['install_root'] = '/opt/newrelic-mongodb-agent'
+default['newrelic_mongodb_agent']['endpoint'] = 'localhost'

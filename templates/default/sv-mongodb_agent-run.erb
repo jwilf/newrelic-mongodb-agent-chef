@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd <%= node['newrelic_mongodb_agent']['install_root'] %>/current
+
+exec 2>&1
+exec /sbin/chpst \
+  -u <%= node['newrelic_mongodb_agent']['user'] %> \
+  /usr/local/rvm/bin/mongodb_agent_bundle exec foreman start

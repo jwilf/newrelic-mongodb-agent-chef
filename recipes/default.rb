@@ -1,4 +1,4 @@
-include_recipe "yum::epel"
+include_recipe "yum-epel"
 include_recipe "rvm::system_install"
 include_recipe "runit"
 
